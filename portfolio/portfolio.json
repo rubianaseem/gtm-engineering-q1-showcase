@@ -1,0 +1,294 @@
+{
+  "owner": "rubianaseem",
+  "quarter": "Q1 (Oct to Dec 2026)",
+  "pattern_names": {
+    "ingest": "reads messy exports as they come",
+    "normalise": "cleans values to one standard",
+    "dedupe": "merges or flags duplicates",
+    "classify": "puts each row in a named bucket",
+    "score": "explainable points-based score",
+    "route": "assigns an owner or next step",
+    "review_queue": "sends risky rows to a human with a reason",
+    "crm_output": "writes a CRM-ready import file, never writes to the CRM",
+    "brief": "writes a plain-English brief",
+    "sql": "uses SQL",
+    "llm_optional": "runs on rules; Claude only if a key is set"
+  },
+  "repos": [
+    {
+      "repo": "outbound-personalization-agent",
+      "when": "Sep 2026",
+      "stream": "early",
+      "skill": "Signal-based outbound copy",
+      "pain": "generic templated outbound that ignores what the account actually did",
+      "patterns": [
+        "ingest",
+        "classify",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": ""
+    },
+    {
+      "repo": "account-signal-scoring-agent",
+      "when": "Sep 2026",
+      "stream": "early",
+      "skill": "Account scoring on fit and intent",
+      "pain": "hot accounts sit in the same queue as cold ones",
+      "patterns": [
+        "ingest",
+        "score",
+        "route",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "5 Qualify"
+    },
+    {
+      "repo": "lead-qualification-agent",
+      "when": "Sep 2026",
+      "stream": "early",
+      "skill": "Lead scoring and routing tiers",
+      "pain": "every inbound lead gets the same treatment regardless of fit",
+      "patterns": [
+        "ingest",
+        "score",
+        "route",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "5 Qualify"
+    },
+    {
+      "repo": "funnel-conversion-reporter",
+      "when": "Sep 2026",
+      "stream": "early",
+      "skill": "Funnel diagnostics",
+      "pain": "a stage conversion drops and nobody can say why",
+      "patterns": [
+        "ingest",
+        "classify",
+        "review_queue",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": ""
+    },
+    {
+      "repo": "hubspot-meddpicc-long-cycle-setup",
+      "when": "Sep 2026",
+      "stream": "early",
+      "skill": "Qualification framework in the CRM",
+      "pain": "long-cycle deals reach review single-threaded with MEDDPICC gaps",
+      "patterns": [
+        "ingest",
+        "score",
+        "review_queue",
+        "crm_output",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": ""
+    },
+    {
+      "repo": "event-lead-import-agent",
+      "when": "2026-10-17",
+      "stream": "A",
+      "skill": "List import hygiene",
+      "pain": "post-event lead lists need cleaning and CRM dedupe before import",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "dedupe",
+        "classify",
+        "review_queue",
+        "crm_output",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "1 Ingest, 3 CRM match"
+    },
+    {
+      "repo": "closed-lost-reason-agent",
+      "when": "2026-10-18",
+      "stream": "A",
+      "skill": "Win-loss data quality",
+      "pain": "picklist loss reasons contradict the rep's own notes",
+      "patterns": [
+        "ingest",
+        "classify",
+        "review_queue",
+        "crm_output",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": ""
+    },
+    {
+      "repo": "utm-governance-agent",
+      "when": "2026-10-19",
+      "stream": "A",
+      "skill": "Attribution data governance",
+      "pain": "UTM variants split one campaign across several report rows",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "classify",
+        "crm_output",
+        "sql"
+      ],
+      "pipeline_step": "4 UTM clean-up"
+    },
+    {
+      "repo": "account-hierarchy-agent",
+      "when": "2026-10-20",
+      "stream": "A",
+      "skill": "Account data model",
+      "pain": "parent/child hierarchies are missing, so company families are split across reps",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "dedupe",
+        "classify",
+        "review_queue",
+        "crm_output",
+        "llm_optional"
+      ],
+      "pipeline_step": "3 CRM match"
+    },
+    {
+      "repo": "n8n-workflows-as-code",
+      "when": "2026-10-21",
+      "stream": "B1",
+      "skill": "Version control for automations",
+      "pain": "n8n has no Git sync below Business, so workflows live as hand-downloaded JSON",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "classify",
+        "review_queue",
+        "llm_optional"
+      ],
+      "pipeline_step": ""
+    },
+    {
+      "repo": "hubspot-form-spam-triage-agent",
+      "when": "2026-10-22",
+      "stream": "A",
+      "skill": "Form spam defence",
+      "pain": "real-looking spam passes CAPTCHA and enrols in workflows",
+      "patterns": [
+        "ingest",
+        "score",
+        "classify",
+        "review_queue",
+        "crm_output",
+        "llm_optional"
+      ],
+      "pipeline_step": "2 Spam triage"
+    },
+    {
+      "repo": "python-for-gtm-basics",
+      "when": "2026-10-23",
+      "stream": "B2",
+      "skill": "Python and APIs for GTM",
+      "pain": "learning to call the HubSpot API, transform JSON and post to Slack",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "score",
+        "route",
+        "review_queue",
+        "crm_output",
+        "llm_optional"
+      ],
+      "pipeline_step": ""
+    },
+    {
+      "repo": "sdr-ae-handoff-brief-agent",
+      "when": "2026-10-28",
+      "stream": "A",
+      "skill": "Sales handoff quality",
+      "pain": "context is lost between the SDR booking and the AE's first call",
+      "patterns": [
+        "ingest",
+        "score",
+        "route",
+        "review_queue",
+        "crm_output",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "8 Handoff briefs"
+    },
+    {
+      "repo": "inbound-lead-router-n8n-to-python",
+      "when": "2026-10-29",
+      "stream": "B3",
+      "skill": "Workflow to code migration",
+      "pain": "large n8n routing flows are undocumented and hard to test",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "dedupe",
+        "score",
+        "route",
+        "review_queue",
+        "crm_output"
+      ],
+      "pipeline_step": "1 Ingest, 7 Route"
+    },
+    {
+      "repo": "lifecycle-stage-audit-agent",
+      "when": "2026-10-30",
+      "stream": "A",
+      "skill": "Lifecycle governance",
+      "pain": "custom values and competing workflows break Lifecycle Stage and the funnel report",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "classify",
+        "review_queue",
+        "crm_output",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "6 Lifecycle check"
+    },
+    {
+      "repo": "gtm-sql-revops-queries",
+      "when": "2026-10-31",
+      "stream": "B4",
+      "skill": "SQL on GTM data",
+      "pain": "CRM report builders cannot answer cross-object, over-time questions",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "sql",
+        "review_queue",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "9 SQL reports"
+    },
+    {
+      "repo": "book-of-business-transfer-agent",
+      "when": "2026-11-01",
+      "stream": "A",
+      "skill": "Territory and ownership changes",
+      "pain": "a departing rep's book moves by bulk owner change and loses context",
+      "patterns": [
+        "ingest",
+        "normalise",
+        "score",
+        "route",
+        "review_queue",
+        "crm_output",
+        "brief",
+        "llm_optional"
+      ],
+      "pipeline_step": "7 Route"
+    }
+  ],
+  "note": "Twelve repos shipped from 17 Oct 2026 in Q1 of the roadmap; five earlier repos were created in September 2026 and are included because the pipeline reuses their patterns."
+}

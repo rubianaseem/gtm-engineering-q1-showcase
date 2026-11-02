@@ -1,0 +1,7 @@
+company_id,name,domain,parent_company_id,owner,lifecycle_stage,employees
+C100,Brightwave Ltd,brightwave.co.uk,,Dan Hughes,opportunity,850
+C101,Brightwave GmbH,www.brightwave.de,C100,tom.becker@northbeam.io,lead,120
+C102,Ledgerly,ledgerly.com,,priya.shah@northbeam.io,customer,320
+C103,Medcore Health,medcore.health,,sam.ortiz@northbeam.io,lead,1200
+C104,Forgeline,forgeline.io,,amira.khan@northbeam.io,salesqualifiedlead,60
+C105,Quillstack,quillstack.com,,Jordan L.,lead,140

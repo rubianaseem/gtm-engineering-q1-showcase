@@ -1,0 +1,8 @@
+contact_id,email,firstname,lastname,company_id,lifecycle_stage,owner,has_open_deal,email_consent
+5001,maya.patel@ledgerly.com,Maya,Patel,C102,Customer,priya.shah@northbeam.io,no,opted_in
+5002,o.brien@brightwave.co.uk,Owen,Brien,C100,opportunity,Dan Hughes,yes,opted_in
+5003,j.schmidt@brightwave.de,Julia,Schmidt,C101,lead,tom.becker@northbeam.io,no,opted_in
+5004,r.cole@medcore.health,Rachel,Cole,C103,MQL,sam.ortiz@northbeam.io,no,opted_in
+5005,anna.kowalski@quillstack.com,Anna,Kowalski,C105,lead,Jordan L.,no,unsubscribed
+5006,luis.garcia@peakroute.com,Luis,Garcia,,Trial User,,no,opted_in
+5007,sophie.martin@forgeline.io,Sophie,Martin,C104,Sales Qualified Lead,amira.khan@northbeam.io,no,opted_in

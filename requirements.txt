@@ -1,0 +1,4 @@
+# The pipeline and the audit use only the Python standard library.
+# These two are optional: Claude for the run summary, dotenv to read .env.
+anthropic>=0.40.0
+python-dotenv>=1.0.0

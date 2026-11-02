@@ -1,0 +1,362 @@
+{
+  "audited_on": "2026-11-02",
+  "repos": {
+    "outbound-personalization-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 798,
+        "readme_under_limit": true,
+        "bio_line": false,
+        "where_each_step_runs": false,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": false,
+        "license": false,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": false,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that generates personalized 3-touch outbound email sequences grounded in real trigger signals"
+    },
+    "account-signal-scoring-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 978,
+        "readme_under_limit": false,
+        "bio_line": false,
+        "where_each_step_runs": false,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": false,
+        "license": false,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": false,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that scores accounts on fit + recency-weighted intent signals and routes hot accounts to AE with an auto-generated brief"
+    },
+    "lead-qualification-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 877,
+        "readme_under_limit": true,
+        "bio_line": false,
+        "where_each_step_runs": false,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": false,
+        "license": false,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": false,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that scores inbound leads on fit + intent and routes them to PLG/SDR/AE"
+    },
+    "funnel-conversion-reporter": {
+      "checks": {
+        "readme": true,
+        "readme_words": 610,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": true
+      },
+      "description": "Reports funnel conversion rates, biggest drop-off stage, and CAC from stage-count data"
+    },
+    "hubspot-meddpicc-long-cycle-setup": {
+      "checks": {
+        "readme": true,
+        "readme_words": 561,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": true
+      },
+      "description": ""
+    },
+    "event-lead-import-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 667,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": false,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that cleans, dedupes and routes post-event lead lists (badge scans, attendees) into CRM-ready HubSpot/Salesforce import files, with a QA brief and sales handoff"
+    },
+    "closed-lost-reason-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 611,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that audits closed-lost deals from HubSpot or Salesforce, finds the real loss reason behind 'Price' and 'Other', and builds a re-engage queue"
+    },
+    "utm-governance-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 581,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that audits UTM tags from your link sheet or HubSpot/Salesforce export, maps messy variants to one taxonomy, shows where campaigns are split in reports, and checks links before launch"
+    },
+    "account-hierarchy-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 601,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "AI agent that matches enrichment parent companies to your Salesforce/HubSpot accounts, writes only safe parent links, sends loose matches to review, and flags company families split across reps"
+    },
+    "n8n-workflows-as-code": {
+      "checks": {
+        "readme": true,
+        "readme_words": 558,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": true
+      },
+      "description": "Version your n8n workflows in GitHub: plain-English diffs, secret redaction, pinned-data removal and a CI audit. Runs with no API key."
+    },
+    "hubspot-form-spam-triage-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 559,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "Score HubSpot form submissions for spam risk, quarantine the fakes and keep them out of workflows and reports, without deleting real leads. Runs with no API key."
+    },
+    "python-for-gtm-basics": {
+      "checks": {
+        "readme": true,
+        "readme_words": 560,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 0,
+        "has_tests": false,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": true
+      },
+      "description": "Three small Python scripts for GTM: call the HubSpot API, transform the JSON, post a digest to Slack. Runs on sample data with no keys."
+    },
+    "sdr-ae-handoff-brief-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 740,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 4,
+        "has_tests": true,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": false,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "Agent that scores SDR-to-AE handoffs, sends weak ones back with questions, and writes first-call briefs. Runs with no API key."
+    },
+    "inbound-lead-router-n8n-to-python": {
+      "checks": {
+        "readme": true,
+        "readme_words": 760,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 12,
+        "has_tests": true,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": true
+      },
+      "description": "A 23-node n8n inbound lead routing workflow rebuilt node for node as tested Python: junk filter, dedupe, CRM match, enrichment, scoring, round robin with OOO fallback, Slack alerts, error branch."
+    },
+    "lifecycle-stage-audit-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 755,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 9,
+        "has_tests": true,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": false,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "Audit HubSpot Lifecycle Stage and its history: custom values, stages that contradict deals, backward moves and workflows fighting over the field. Safe fix file plus review queue. Runs with no API key."
+    },
+    "gtm-sql-revops-queries": {
+      "checks": {
+        "readme": true,
+        "readme_words": 800,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 20,
+        "has_tests": true,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": true
+      },
+      "description": "Seven RevOps SQL queries (funnel, stage velocity, lead-to-deal cohorts, pipeline coverage, attribution, data-quality audit, stalled deals) on a messy CRM-shaped SQLite dataset, with a Python runner, review queue and brief. No API key needed."
+    },
+    "book-of-business-transfer-agent": {
+      "checks": {
+        "readme": true,
+        "readme_words": 830,
+        "readme_under_limit": true,
+        "bio_line": true,
+        "where_each_step_runs": true,
+        "setup_md": true,
+        "test_functions": 17,
+        "has_tests": true,
+        "sample_data": true,
+        "requirements": true,
+        "env_example": true,
+        "license": true,
+        "emoji_free": true,
+        "emoji_files": [],
+        "details_md": true,
+        "walkthrough_md": false
+      },
+      "description": "Plan the handoff when a rep leaves: rank their accounts, match each to the right rep (region, segment, fit, history, capacity), safe owner import, review queue, sequence re-enrol plan and briefs. No API key needed."
+    }
+  }
+}

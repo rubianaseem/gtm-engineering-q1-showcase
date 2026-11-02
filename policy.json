@@ -1,0 +1,101 @@
+{
+  "company_name": "Northbeam",
+  "internal_domains": ["northbeam.io"],
+  "free_email_domains": ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "proton.me"],
+  "disposable_domains": ["mailinator.com", "10minutemail.com", "guerrillamail.com", "tempmail.com", "yopmail.com"],
+  "require_page_url": true,
+  "spam": {
+    "weights": {
+      "DISPOSABLE_EMAIL": 40,
+      "KEYBOARD_MASH_NAME": 30,
+      "RANDOM_EMAIL_LOCALPART": 20,
+      "FAKE_PHONE": 20,
+      "PITCH_MESSAGE_WITH_LINK": 35,
+      "NO_PAGE_URL": 25,
+      "SAME_MESSAGE_MANY_EMAILS": 30,
+      "SAME_PHONE_MANY_EMAILS": 15
+    },
+    "quarantine_at": 60,
+    "review_at": 30,
+    "pitch_words": ["seo", "rank your site", "backlinks", "guest post", "web design services", "crypto", "lead lists for sale"]
+  },
+  "country_aliases": {
+    "GB": ["uk", "united kingdom", "england", "scotland", "wales", "gb", "great britain"],
+    "IE": ["ireland", "ie", "republic of ireland"],
+    "DE": ["germany", "deutschland", "de"],
+    "AT": ["austria", "österreich", "osterreich", "at"],
+    "CH": ["switzerland", "schweiz", "ch"],
+    "US": ["us", "usa", "united states", "united states of america"],
+    "CA": ["canada", "ca"],
+    "FR": ["france", "fr"],
+    "IN": ["india", "in"]
+  },
+  "territories": {
+    "UKI": ["GB", "IE"],
+    "DACH": ["DE", "AT", "CH"],
+    "NA": ["US", "CA"]
+  },
+  "owner_aliases": {
+    "dan hughes": "dan.hughes@northbeam.io",
+    "jordan l.": "jordan.lee@northbeam.io",
+    "jordan lee": "jordan.lee@northbeam.io"
+  },
+  "utm": {
+    "sources": {
+      "google": ["google", "google ads", "adwords", "googleads"],
+      "linkedin": ["linkedin", "li", "linked in", "lnkd"],
+      "facebook": ["facebook", "fb", "meta"],
+      "newsletter": ["newsletter", "hs_email", "email newsletter"],
+      "g2": ["g2", "g2crowd", "g2 crowd"]
+    },
+    "mediums": {
+      "cpc": ["cpc", "ppc", "paid search", "paidsearch"],
+      "paid_social": ["paid_social", "paid social", "paidsocial", "social-paid"],
+      "email": ["email", "e-mail"],
+      "review_site": ["review_site", "review", "review site"],
+      "organic": ["organic"]
+    },
+    "ambiguous_mediums": ["social"],
+    "internal_sources": ["website", "homepage", "site", "internal"],
+    "campaign_pattern": "^[a-z0-9]+(_[a-z0-9]+)*$"
+  },
+  "lifecycle_order": ["subscriber", "lead", "marketingqualifiedlead", "salesqualifiedlead", "opportunity", "customer", "evangelist"],
+  "lifecycle_aliases": {
+    "subscriber": ["subscriber"],
+    "lead": ["lead"],
+    "marketingqualifiedlead": ["marketingqualifiedlead", "mql", "marketing qualified lead"],
+    "salesqualifiedlead": ["salesqualifiedlead", "sql", "sales qualified lead"],
+    "opportunity": ["opportunity"],
+    "customer": ["customer"],
+    "evangelist": ["evangelist"]
+  },
+  "scoring": {
+    "employee_bands": [[100, 2000, 25], [50, 99, 15], [2001, 1000000, 15], [10, 49, 5]],
+    "senior_title_words": ["chief", "cfo", "ceo", "coo", "cro", "vp", "vice president", "head", "director", "founder"],
+    "mid_title_words": ["manager", "lead", "owner"],
+    "senior_points": 20,
+    "mid_points": 12,
+    "other_title_points": 4,
+    "ops_title_bonus_words": ["revops", "revenue operations", "sales ops", "sales operations", "marketing ops", "marketing operations", "crm"],
+    "ops_title_bonus": 10,
+    "free_email_penalty": 15,
+    "demo_points": 25,
+    "pricing_page_points": 10,
+    "max_page_points": 10,
+    "message_points": 5,
+    "tier_a_at": 70,
+    "tier_b_at": 40
+  },
+  "routing": {
+    "tier_role": {"A": "AE", "B": "SDR"},
+    "lifecycle_by_tier": {"A": "marketingqualifiedlead", "B": "marketingqualifiedlead", "C": "lead"}
+  },
+  "handoff_checklist": [
+    ["why_now", "Why are they looking now?"],
+    ["pain", "What problem did they describe in their own words?"],
+    ["stakeholders", "Who else is involved, and who signs?"],
+    ["current_tools", "What do they use today?"],
+    ["timeline", "When do they need it working?"],
+    ["budget", "Is there budget, and whose?"]
+  ]
+}

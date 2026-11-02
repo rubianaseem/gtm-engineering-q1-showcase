@@ -1,0 +1,10 @@
+rep_id,name,email,role,territory,status,daily_cap,assigned_today
+R01,Amira Khan,amira.khan@northbeam.io,AE,UKI,active,4,1
+R02,Grace Okafor,grace.okafor@northbeam.io,SDR,UKI,active,6,5
+R03,Dan Hughes,dan.hughes@northbeam.io,AE,UKI,departed,0,0
+R04,Tom Becker,tom.becker@northbeam.io,AE,DACH,active,4,0
+R05,Lena Vogel,lena.vogel@northbeam.io,SDR,DACH,active,3,3
+R06,Priya Shah,priya.shah@northbeam.io,AE,NA,active,5,2
+R07,Sam Ortiz,sam.ortiz@northbeam.io,AE,NA,ooo,5,0
+R08,Jordan Lee,jordan.lee@northbeam.io,SDR,NA,active,6,1
+R09,Ana Ruiz,ana.ruiz@northbeam.io,SDR,NA,active,6,0
